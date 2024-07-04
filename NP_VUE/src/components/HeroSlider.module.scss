@@ -1,0 +1,79 @@
+/* @import "./HeroSlider.module.scss"; */
+.hero {
+  margin-top: 3px;
+  margin-bottom: 36px;
+  overflow: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slideImage {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideImage li {
+  flex: 0 0 100%;
+  list-style: none;
+}
+
+.slideImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pages {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.pages li {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pages li.current {
+  background: #333;
+}
+
+.slideBtnLeft,
+.slideBtnRight {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 500;
+}
+
+.slideBtnLeft {
+  left: 10px;
+}
+
+.slideBtnRight {
+  right: 10px;
+}
+
+.buttonSet {
+  display: flex;
+  flex-direction: row;
+}
